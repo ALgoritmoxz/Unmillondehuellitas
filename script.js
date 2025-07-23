@@ -75,6 +75,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const imageFile = document.getElementById("image-upload").files[0];
             const name = document.getElementById("name").value;
             const color = document.getElementById("color").value;
+            const message = document.getElementById("message").value;
 
             if (imageFile) {
                 const reader = new FileReader();
@@ -88,6 +89,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             pixel.style.backgroundColor = color;
             pixel.setAttribute("data-name", name);
+            pixel.setAttribute("data-message", message);
         });
 
         pixelForm.style.display = "none";
@@ -98,9 +100,8 @@ document.addEventListener("DOMContentLoaded", function() {
         selectedPixels.forEach(pixel => {
             // Apply the changes to the selected pixels
             pixel.style.border = "2px solid green"; // Mark the pixels as approved
+            alert("Cambios aprobados y aplicados a los píxeles seleccionados.");
         });
-
-        alert("Cambios aprobados y aplicados a los píxeles seleccionados.");
     });
 
     // Log out
