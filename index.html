@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Un Millón de Huellitas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="main-site">
+        <h1>Un Millón de Huellitas</h1>
+        <p>Haz clic en las huellitas para venderlas.</p>
+        <div class="grid" id="pixel-grid"></div>
+        <button id="admin-login-btn">Acceder al Panel de Administración</button>
+    </div>
+
+    <!-- Admin Login Section -->
+    <div id="admin-login">
+        <h2>Ingreso de Administrador</h2>
+        <form id="login-form">
+            <label for="admin-user">Usuario:</label>
+            <input type="text" id="admin-user" placeholder="Usuario" required>
+            <label for="admin-pass">Contraseña:</label>
+            <input type="password" id="admin-pass" placeholder="Contraseña" required>
+            <button type="submit">Iniciar sesión</button>
+        </form>
+    </div>
+
+    <!-- Admin Panel Section (hidden by default) -->
+    <div id="admin-panel" class="hidden">
+        <h1>Panel de Administración - Un Millón de Huellitas</h1>
+        <button id="config-pixels">Configurar número de píxeles</button>
+        <button id="logout-btn">Cerrar sesión</button>
+        <div class="grid" id="admin-pixel-grid"></div>
+        <button id="approve-changes">Aprobar cambios</button>
+    </div>
+
+    <!-- Pixel Form to Attach Image, Name, and Color -->
+    <div id="pixelForm" class="pixel-form">
+        <h2>Detalles de la Huellita</h2>
+        <form id="form-pixel">
+            <label for="image">Imagen URL o subir imagen:</label>
+            <input type="text" id="image" placeholder="URL de imagen">
+            <input type="file" id="image-upload" accept="image/*">
+            <br>
+            <label for="name">Nombre de la Huellita:</label>
+            <input type="text" id="name" placeholder="Nombre">
+            <br>
+            <label for="color">Color de la Huellita:</label>
+            <input type="color" id="color" value="#ff9900">
+            <br>
+            <button type="submit">Guardar</button>
+            <button type="button" id="cancel-btn">Cancelar</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
