@@ -39,7 +39,6 @@ document.addEventListener("DOMContentLoaded", function() {
         const pixel = document.createElement("div");
         pixel.classList.add("pixel");
 
-        // Allow pixel selection with the mouse
         pixel.addEventListener("click", function() {
             if (selectedPixels.includes(pixel)) {
                 selectedPixels = selectedPixels.filter(p => p !== pixel);

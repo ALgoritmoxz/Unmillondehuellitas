@@ -7,13 +7,29 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #fff; /* Fondo blanco */
+    background-color: #f9f9f9; /* Fondo blanco suave */
     text-align: center;
     padding: 20px;
 }
 
-h1, h2 {
+h1 {
+    color: #ff6347; /* Color rojo vibrante para el título */
+    font-size: 3em;
+}
+
+h2 {
+    color: #4CAF50; /* Color verde para el subtítulo */
+}
+
+p {
+    font-size: 1.5em;
     color: #333;
+}
+
+.paw-image {
+    width: 100px;
+    height: auto;
+    margin: 20px 0;
 }
 
 #main-site {
